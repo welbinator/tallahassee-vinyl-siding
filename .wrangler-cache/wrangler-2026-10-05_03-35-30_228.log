@@ -1,0 +1,611 @@
+
+--- 2026-10-05T03:35:30.573Z debug
+🪵  Writing logs to "/home/highprrrr/tallahassee-vinyl-siding/.wrangler-cache/wrangler-2026-10-05_03-35-30_228.log"
+---
+
+--- 2026-10-05T03:35:30.573Z debug
+.env file not found at "/home/highprrrr/tallahassee-vinyl-siding/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-10-05T03:35:30.574Z debug
+.env file not found at "/home/highprrrr/tallahassee-vinyl-siding/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-10-05T03:35:30.586Z log
+
+ ⛅️ wrangler 4.147.0
+────────────────────
+---
+
+--- 2026-10-05T03:35:30.609Z debug
+Running autoconfig detection in /home/highprrrr/tallahassee-vinyl-siding...
+---
+
+--- 2026-10-05T03:35:30.610Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"wrangler command started","timestamp":1791171330610,"properties":{"amplitude_session_id":1791171330594,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"jsonc","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":true,"agent":null,"argsUsed":[],"argsCombination":"","sanitizedCommand":"deploy","sanitizedArgs":{"path":null},"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T03:35:30.620Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"autoconfig_process_started","timestamp":1791171330620,"properties":{"amplitude_session_id":1791171330609,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","autoConfigId":"100063f8-5959-474e-a196-28936a397d42","command":"wrangler deploy","dryRun":false,"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T03:35:30.621Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"autoconfig_detection_started","timestamp":1791171330621,"properties":{"amplitude_session_id":1791171330609,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","autoConfigId":"100063f8-5959-474e-a196-28936a397d42","command":"wrangler deploy","currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T03:35:30.634Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"autoconfig_detection_completed","timestamp":1791171330634,"properties":{"amplitude_session_id":1791171330610,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","autoConfigId":"100063f8-5959-474e-a196-28936a397d42","configured":true,"success":true,"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T03:35:30.636Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"autoconfig_process_ended","timestamp":1791171330636,"properties":{"amplitude_session_id":1791171330622,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","autoConfigId":"100063f8-5959-474e-a196-28936a397d42","command":"wrangler deploy","dryRun":false,"success":true,"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T03:35:30.724Z debug
+Starting verifyWorkerMatchesCITag() with tag: undefined, name: tallahassee-vinyl-siding
+---
+
+--- 2026-10-05T03:35:30.724Z debug
+No WRANGLER_CI_MATCH_TAG variable provided, aborting verifyWorkerMatchesCITag()
+---
+
+--- 2026-10-05T03:35:30.725Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/services/tallahassee-vinyl-siding
+---
+
+--- 2026-10-05T03:35:30.725Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:30.725Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:30.725Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:30.725Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:30.981Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:30.982Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:30.982Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:30.982Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:30.983Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/tallahassee-vinyl-siding/deployments
+---
+
+--- 2026-10-05T03:35:30.984Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:30.984Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:30.984Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:30.984Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:31.104Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:31.104Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:31.104Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:31.104Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:31.106Z info
+🌀 Building list of assets...
+---
+
+--- 2026-10-05T03:35:31.107Z info
+✨ Read 7 files from the assets directory /home/highprrrr/tallahassee-vinyl-siding/dist
+---
+
+--- 2026-10-05T03:35:31.108Z debug
+/_astro
+---
+
+--- 2026-10-05T03:35:31.108Z debug
+/favicon.ico
+---
+
+--- 2026-10-05T03:35:31.108Z debug
+/favicon.svg
+---
+
+--- 2026-10-05T03:35:31.108Z debug
+/images
+---
+
+--- 2026-10-05T03:35:31.108Z debug
+/index.html
+---
+
+--- 2026-10-05T03:35:31.108Z debug
+/images/hero.jpg
+---
+
+--- 2026-10-05T03:35:31.108Z debug
+/_astro/index.qYVnj2le.css
+---
+
+--- 2026-10-05T03:35:31.121Z info
+🌀 Starting asset upload...
+---
+
+--- 2026-10-05T03:35:31.122Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/tallahassee-vinyl-siding/assets-upload-session
+---
+
+--- 2026-10-05T03:35:31.122Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:31.122Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:31.122Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:31.122Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:32.296Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:32.297Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.297Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.297Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:32.298Z info
+🌀 Found 3 new or modified static assets to upload. Proceeding with upload...
+---
+
+--- 2026-10-05T03:35:32.298Z info
++ /index.html
+---
+
+--- 2026-10-05T03:35:32.299Z info
++ /_astro/index.qYVnj2le.css
+---
+
+--- 2026-10-05T03:35:32.299Z info
++ /images/hero.jpg
+---
+
+--- 2026-10-05T03:35:32.305Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/assets/upload?base64=true
+---
+
+--- 2026-10-05T03:35:32.305Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.305Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.305Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.307Z debug
+BODY: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.307Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:32.310Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/assets/upload?base64=true
+---
+
+--- 2026-10-05T03:35:32.310Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.310Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.310Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.311Z debug
+BODY: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.311Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:32.319Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/assets/upload?base64=true
+---
+
+--- 2026-10-05T03:35:32.319Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.319Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.319Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.321Z debug
+BODY: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:32.321Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:33.013Z debug
+-- START CF API RESPONSE: Accepted 202
+---
+
+--- 2026-10-05T03:35:33.013Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.013Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.013Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:33.014Z info
+Uploaded 1 of 3 assets
+---
+
+--- 2026-10-05T03:35:33.015Z debug
+✨ /_astro/index.qYVnj2le.css
+---
+
+--- 2026-10-05T03:35:33.207Z debug
+-- START CF API RESPONSE: Accepted 202
+---
+
+--- 2026-10-05T03:35:33.207Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.207Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.207Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:33.208Z info
+Uploaded 2 of 3 assets
+---
+
+--- 2026-10-05T03:35:33.208Z debug
+✨ /index.html
+---
+
+--- 2026-10-05T03:35:33.617Z debug
+-- START CF API RESPONSE: Created 201
+---
+
+--- 2026-10-05T03:35:33.618Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.618Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.618Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:33.618Z info
+Uploaded 3 of 3 assets
+---
+
+--- 2026-10-05T03:35:33.618Z debug
+✨ /images/hero.jpg
+---
+
+--- 2026-10-05T03:35:33.618Z log
+✨ Success! Uploaded 3 files (2 already uploaded) (1.32 sec)
+
+---
+
+--- 2026-10-05T03:35:33.627Z log
+Total Upload: 0.96 KiB / gzip: 0.51 KiB
+---
+
+--- 2026-10-05T03:35:33.628Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/tallahassee-vinyl-siding/settings
+---
+
+--- 2026-10-05T03:35:33.628Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.628Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.628Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.628Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:33.800Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:33.800Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.800Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.800Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:33.805Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/tallahassee-vinyl-siding/versions
+---
+
+--- 2026-10-05T03:35:33.805Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.805Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.805Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.806Z debug
+BODY: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:33.806Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:34.219Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:34.219Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.219Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.219Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:34.220Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/tallahassee-vinyl-siding/deployments
+---
+
+--- 2026-10-05T03:35:34.220Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.220Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.220Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.220Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:34.617Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:34.618Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.618Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.618Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:34.620Z debug
+-- START CF API REQUEST: PATCH https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/tallahassee-vinyl-siding/script-settings
+---
+
+--- 2026-10-05T03:35:34.620Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.620Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.620Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:34.620Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:35.089Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:35.089Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.090Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.090Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:35.091Z log
+Uploaded tallahassee-vinyl-siding (4.11 sec)
+---
+
+--- 2026-10-05T03:35:35.093Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/workers/tallahassee-vinyl-siding
+---
+
+--- 2026-10-05T03:35:35.093Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.093Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.093Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.093Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:35.255Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:35.255Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.255Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.255Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:35.256Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/tallahassee-vinyl-siding/subdomain
+---
+
+--- 2026-10-05T03:35:35.256Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.256Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.256Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.256Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T03:35:35.759Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T03:35:35.760Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.760Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T03:35:35.760Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T03:35:35.761Z log
+Deployed tallahassee-vinyl-siding triggers (0.67 sec)
+---
+
+--- 2026-10-05T03:35:35.761Z log
+  https://tallahassee-vinyl-siding.james-welbes.workers.dev
+---
+
+--- 2026-10-05T03:35:35.762Z log
+Current Version ID: 9d7adaeb-e952-46da-a0ea-51cdb39a1cc8
+---
+
+--- 2026-10-05T03:35:35.766Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"deploy worker script","timestamp":1791171335766,"properties":{"amplitude_session_id":1791171335762,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","usesTypeScript":false,"durationMs":5052,"assetUploadDurationMs":1318,"assetUploadIsBulk":true,"assetUploadFileCount":3,"assetUploadTotalBytes":465203,"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T03:35:35.770Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"wrangler command completed","timestamp":1791171335770,"properties":{"amplitude_session_id":1791171330594,"amplitude_event_id":1,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"jsonc","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":true,"agent":null,"argsUsed":[],"argsCombination":"","sanitizedCommand":"deploy","sanitizedArgs":{"path":null},"durationMs":5192,"currentAgentSkillsInstalled":null}}
+---
