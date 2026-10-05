@@ -40,7 +40,7 @@ const reasons = [
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-bg" style={`background-image:url('${href("/images/hero.jpg")}')`} aria-hidden="true"></div>
+    <div class="hero-bg" id="hero-bg" style={`background-image:url('${href("/images/hero.jpg")}')`} aria-hidden="true"></div>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <p class="eyebrow hero-eyebrow reveal" data-reveal>Tallahassee, FL &middot; Licensed &amp; bonded</p>
@@ -152,12 +152,34 @@ const reasons = [
         else { status.textContent = j.error || "Something went wrong. Please call us instead."; }
       } catch { status.textContent = "Something went wrong. Please call us instead."; }
     });
+
+    // Hero parallax — background drifts slower than the page for a subtle depth effect.
+    (function(){
+      const bg = document.getElementById("hero-bg");
+      const hero = document.querySelector(".hero");
+      if (!bg || !hero) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const SPEED = 0.4;   // background lags the page (moves at 40% of scroll)
+      let ticking = false;
+      function update(){
+        const rect = hero.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight){
+          const scrolled = Math.max(-rect.top, 0);
+          bg.style.setProperty("--py", (scrolled * SPEED) + "px");
+        }
+        ticking = false;
+      }
+      function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll, { passive: true });
+      update();
+    })();
   </script>
 
   <style>
     .hero { position: relative; min-height: min(92vh, 820px); display: flex; align-items: flex-end; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 35%; transform: scale(1.08); animation: heroZoom 14s ease-out forwards; }
-    @keyframes heroZoom { to { transform: scale(1); } }
+    .hero-bg { position: absolute; left: 0; right: 0; top: -12%; height: 124%; background-size: cover; background-position: center 35%; transform: translate3d(0, var(--py, 0px), 0) scale(1.08); will-change: transform; animation: heroZoom 14s ease-out forwards; }
+    @keyframes heroZoom { from { transform: translate3d(0, var(--py, 0px), 0) scale(1.14); } to { transform: translate3d(0, var(--py, 0px), 0) scale(1.08); } }
     .hero-scrim { position: absolute; inset: 0; background:
       linear-gradient(to top, rgba(10,16,13,.92) 0%, rgba(10,16,13,.55) 38%, rgba(10,16,13,.18) 70%, rgba(10,16,13,.35) 100%); }
     .hero-inner { position: relative; z-index: 2; padding: clamp(2rem, 6vw, 4.5rem) 1.4rem clamp(2.6rem, 6vw, 4.5rem); max-width: 860px; }
