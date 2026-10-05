@@ -1,0 +1,214 @@
+---
+import Layout from "../layouts/Layout.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const href = (p) => `${base}${p}`;
+const PHONE = "(850) 399-3777";
+const TEL = "+18503993777";
+
+const services = [
+  { t: "Vinyl Siding", d: "New installs and full replacements that hold up to Florida sun, rain, and humidity. Over 300 color and texture options." },
+  { t: "Siding Repair", d: "Faded, cracked, or falling siding fixed right. We match what you have or upgrade the whole exterior." },
+  { t: "Screen Rooms & Porches", d: "Enclosed screen porches and sun rooms built so you can actually enjoy a Tallahassee evening outside." },
+  { t: "Gutters", d: "Gutter installation and replacement so water goes where it should and your home stays protected." },
+  { t: "Soffit & Fascia", d: "The trim work that seals and finishes your roofline and keeps pests and moisture out." },
+  { t: "Decks", d: "Custom decks built to last. The outdoor space you have been meaning to add for years." },
+];
+
+const reasons = [
+  { t: "20+ years in the trade", d: "Two decades of construction and remodeling across the Tallahassee area." },
+  { t: "Licensed and bonded", d: "A real general contractor, insured and accountable on every job." },
+  { t: "On time, on budget", d: "We tell you what it costs up front and finish when we said we would." },
+  { t: "Free estimates", d: "No pressure. We look at the job, give you a straight number, and let you decide." },
+];
+---
+<Layout>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href={href("/")}>
+        <img class="mark" src={href("/favicon.svg")} alt="" width="34" height="34" />
+        Tallahassee Vinyl Siding
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-menu">
+        <a href="#services">Services</a>
+        <a href="#why">Why us</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-phone" href={`tel:${TEL}`}>{PHONE}</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy rise">
+        <p class="eyebrow">Tallahassee, FL &middot; Licensed &amp; bonded</p>
+        <h1>Siding that makes your whole house look new again.</h1>
+        <p class="lede">We are the leading vinyl siding company in the Tallahassee area, with over 20 years of construction and remodeling behind us. Siding, screen rooms, gutters, decks, and more, done on time and within budget.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href={`tel:${TEL}`}>Call for a free estimate</a>
+          <a class="btn btn-ghost" href="#services">See what we do</a>
+        </div>
+        <ul class="hero-trust">
+          <li><strong>20+</strong> years experience</li>
+          <li><strong>300+</strong> siding colors</li>
+          <li><strong>Free</strong> estimates</li>
+        </ul>
+      </div>
+      <div class="hero-media rise">
+        <img src={href("/images/hero.jpg")} alt="Tallahassee home with freshly installed vinyl siding" width="960" height="540" />
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <div class="section-head rise">
+        <p class="eyebrow">What we do</p>
+        <h2>One contractor for your whole exterior.</h2>
+        <p class="sub">Siding is our specialty, but we handle everything that goes with it so you are not juggling five different crews.</p>
+      </div>
+      <div class="svc-grid">
+        {services.map((s) => (
+          <article class="svc rise">
+            <h3>{s.t}</h3>
+            <p>{s.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="section why">
+    <div class="wrap why-grid">
+      <div class="why-copy rise">
+        <p class="eyebrow">Why GCE Improvements</p>
+        <h2>Craftsmanship and competitive prices, from a contractor who takes care of people.</h2>
+        <p class="sub">Gerald Hires and his crew have built a reputation around quality work and treating customers right. Licensed, bonded, and proud of every job we finish.</p>
+        <a class="btn btn-primary" href="#contact">Get your free estimate</a>
+      </div>
+      <ul class="why-list">
+        {reasons.map((r) => (
+          <li class="rise"><strong>{r.t}</strong><span>{r.d}</span></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap contact-grid">
+      <div class="contact-copy rise">
+        <p class="eyebrow">Free estimate</p>
+        <h2>Let's talk about your project.</h2>
+        <p class="sub">Tell us what you need and we will get back to you with a straight answer. Prefer to talk now? Call <a class="inline-link" href={`tel:${TEL}`}>{PHONE}</a>.</p>
+        <div class="contact-facts">
+          <div><span>Phone</span><a href={`tel:${TEL}`}>{PHONE}</a></div>
+          <div><span>Area</span>Tallahassee &amp; the Big Bend</div>
+          <div><span>Hours</span>Call for current schedule</div>
+        </div>
+      </div>
+      <form class="contact-form rise" id="lead-form">
+        <input type="text" name="website_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;" />
+        <label>Name<input type="text" name="name" required /></label>
+        <label>Email<input type="email" name="email" required /></label>
+        <label>Phone<input type="tel" name="phone" /></label>
+        <label>What do you need?<textarea name="message" rows="4" placeholder="New siding, repair, screen room, deck..."></textarea></label>
+        <button class="btn btn-primary" type="submit">Request my free estimate</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <div>
+        <div class="brand" style="color:#fff;margin-bottom:.6rem;">
+          <img class="mark" src={href("/favicon.svg")} alt="" width="30" height="30" /> Tallahassee Vinyl Siding
+        </div>
+        <p class="foot-note">GCE Improvements. Licensed and bonded general contractor serving Tallahassee, FL and the surrounding Big Bend area.</p>
+      </div>
+      <div class="foot-contact">
+        <a class="btn btn-primary" href={`tel:${TEL}`}>{PHONE}</a>
+        <p class="foot-note">Free estimates &middot; Siding, screen rooms, gutters, decks</p>
+      </div>
+    </div>
+    <div class="wrap foot-bar"><span>&copy; {new Date().getFullYear()} GCE Improvements</span><span>Tallahassee, Florida</span></div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("lead-form");
+    const status = document.getElementById("form-status");
+    if (form) form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const fd = Object.fromEntries(new FormData(form).entries());
+      status.textContent = "Sending...";
+      try {
+        const r = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(fd) });
+        const j = await r.json();
+        if (j.ok) { status.textContent = "Thanks. We got it and will reach out soon."; form.reset(); }
+        else { status.textContent = j.error || "Something went wrong. Please call us instead."; }
+      } catch { status.textContent = "Something went wrong. Please call us instead."; }
+    });
+  </script>
+
+  <style>
+    .hero { padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3rem); }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+    .lede { font-size: 1.18rem; color: var(--ink-soft); margin: 1.1rem 0 1.6rem; max-width: 34ch; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+    .hero-trust { list-style: none; display: flex; gap: 1.8rem; padding: 0; margin: 1.8rem 0 0; }
+    .hero-trust li { font-size: 0.95rem; color: var(--ink-soft); }
+    .hero-trust strong { display: block; font-family: var(--font-display); font-size: 1.5rem; color: var(--ever-deep); }
+    .hero-media img { border-radius: var(--radius); box-shadow: 0 24px 50px rgba(23,32,28,.18); width: 100%; height: auto; object-fit: cover; }
+
+    .section { padding: clamp(2.8rem, 6vw, 5rem) 0; }
+    .section-head { max-width: 46ch; margin-bottom: 2.4rem; }
+    .section-head .sub, .why-copy .sub, .contact-copy .sub { color: var(--ink-soft); font-size: 1.1rem; margin-top: 0.8rem; }
+
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+    .svc { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
+    .svc h3 { margin-bottom: 0.5rem; }
+    .svc p { color: var(--ink-soft); font-size: 0.98rem; }
+    .svc:hover { border-color: var(--ever-bright); box-shadow: 0 10px 26px rgba(31,107,74,.1); }
+
+    .why { background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+    .why-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.9rem; }
+    .why-list li { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.3rem; }
+    .why-list strong { display: block; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); }
+    .why-list span { color: var(--ink-soft); font-size: 0.97rem; }
+    .why-copy .btn { margin-top: 1.4rem; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+    .inline-link { color: var(--ever-deep); font-weight: 700; }
+    .contact-facts { display: grid; gap: 0.9rem; margin-top: 1.8rem; }
+    .contact-facts > div { display: grid; grid-template-columns: 90px 1fr; align-items: baseline; border-top: 1px solid var(--line); padding-top: 0.7rem; }
+    .contact-facts span { font-family: var(--font-display); font-weight: 700; color: var(--ink-soft); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .contact-facts a { color: var(--ever-deep); font-weight: 700; }
+
+    .contact-form { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; display: grid; gap: 0.9rem; position: relative; }
+    .contact-form label { display: grid; gap: 0.35rem; font-family: var(--font-display); font-weight: 600; font-size: 0.92rem; color: var(--ink); }
+    .contact-form input, .contact-form textarea { font-family: var(--font-body); font-size: 16px; padding: 0.7rem 0.8rem; border: 1px solid var(--line); border-radius: 9px; background: var(--paper); color: var(--ink); }
+    .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--ever-bright); border-color: var(--ever-bright); }
+    .contact-form .btn { margin-top: 0.3rem; }
+    .form-status { font-size: 0.92rem; color: var(--ever-deep); min-height: 1.2em; margin: 0; }
+
+    .foot-inner { display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; padding: 2.6rem 1.4rem 1.6rem; }
+    .foot-note { color: #9aa8a0; font-size: 0.9rem; max-width: 40ch; margin-top: 0.5rem; }
+    .foot-contact { display: grid; gap: 0.6rem; align-content: start; }
+    .foot-bar { display: flex; justify-content: space-between; color: #8c9a92; font-size: 0.85rem; padding: 1.1rem 1.4rem; border-top: 1px solid rgba(255,255,255,.08); }
+
+    @media (max-width: 860px) {
+      .hero-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-media { order: -1; }
+      .hero-media img { max-height: 320px; }
+      .svc-grid { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 861px) and (max-width: 1040px) {
+      .svc-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</Layout>
